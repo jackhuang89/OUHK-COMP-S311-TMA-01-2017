@@ -11,21 +11,16 @@ package tma1_q1;
  */
 public abstract class Clock {
     abstract public String description();
-    public String name;
-    public String year;
-    public String country;
+    private String name;
+    private String year;
+    private String country;
     
     public String HTML(){
         return "<HTML>\n" +
-"	<h2>The Ching Dynasty Clock</h2>\n" +
-"	<h3>Year made: 1782</h3>\n" +
-"	<h3>Made in England</h3>\n" +
-"	<p>The clock is powered by clockwork spring</p> \n" +
-"</HTML><HTML>\n" +
-"	<h2>The Ching Dynasty Clock</h2>\n" +
-"	<h3>Year made: 1782</h3>\n" +
-"	<h3>Made in England</h3>\n" +
-"	<p>The clock is powered by clockwork spring</p> \n" +
+"	<h2>" + this.getName()+ "</h2>\n" +
+"	<h3>Year made: " + this.getYear()+ "</h3>\n" +
+"	<h3>Made in " + this.getCountry()+ "</h3>\n" +
+"	<p>" + this.description()+ "</p> \n" +
 "</HTML>";
     }
 

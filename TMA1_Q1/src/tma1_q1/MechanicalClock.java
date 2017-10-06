@@ -11,9 +11,26 @@ package tma1_q1;
  */
 public class MechanicalClock extends Clock{
 
+    private String powerSource;
+    
     @Override
     public String description() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //depends on power source 
+        if("spring".equals(this.powerSource)){
+            return "The clock uses spring";
+        }else if("weight".equals(this.powerSource)){
+            return "The clock uses weight";
+        }
+        return "Input error";
     }
+
+    public String getPowerSource() {
+        return powerSource;
+    }
+
+    public void setPowerSource(String powerSource) {
+        this.powerSource = powerSource;
+    }
+    
     
 }
