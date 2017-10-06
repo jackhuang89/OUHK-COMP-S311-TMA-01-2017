@@ -16,6 +16,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ElectronicClock ec = new ElectronicClock();
+        ec.setPowerSource("AC power");
+        String test = ec.description();
+        System.out.println(test);
     }
     
 }

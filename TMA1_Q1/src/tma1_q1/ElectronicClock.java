@@ -9,15 +9,27 @@ package tma1_q1;
  *
  * @author jackhuang
  */
-public abstract class ElectronicClock extends Clock{
+public class ElectronicClock extends Clock{
 
-    public String description(String powerSource) {
-        //depends on power source
-        if(powerSource == "battery"){
+    private String powerSource;
+    
+    @Override
+    public String description() {
+        //depends on power source AC or batteries
+        if("AC power".equals(this.powerSource)){
+            return "The clock uses AC";
+        }else if("batteries".equals(this.powerSource)){
             return "The clock uses batteries";
         }
-        
-        return "The clock uses AC";
+        return "Input error";
+    }
+
+    public String getPowerSource() {
+        return powerSource;
+    }
+
+    public void setPowerSource(String powerSource) {
+        this.powerSource = powerSource;
     }
     
 }
